@@ -14,23 +14,24 @@ import static io.qameta.allure.Allure.step;
 public class AllureTestExample  {
 
   @Test
-  @AllureId("11799")
-  @DisplayName("Авторизация через GitHub")
+  @AllureId("11796")
+  @DisplayName("Авторизация через Google")
   @Tag("web")
   @Story("Авторизация через сторонние системы")
   @Owner("allure8")
   @Feature("Авторизация")
+
   public void testGoogleAuth() {
     step("Открываем главную страницу");
     step("Нажимаем кнопку авторизация");
-    step("Выбираем способ авторизации через GitHub");
+    step("Выбираем способ авторизации через Google");
     step("Авторизуемся как пользователь", () -> {
       step("Вводим логин");
       step("Вводим пароль");
       step("Нажимаем кнопку войти");
     });
     step("Должны оказаться на главной страницы сайта");
-    step("Профиль пользователя должен быть заполнен из GitHub", () -> {
+    step("Профиль пользователя должен быть заполнен из Google", () -> {
       step("Имя");
       step("Логин");
       step("Аватарка");
